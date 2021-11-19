@@ -14,6 +14,10 @@ const timestampEndpoint = `${API_BASE_URL}/api/timestamp`;
 app.use(morgan('dev'));
 app.use(cors({ optionsSuccessStatus: 200 }));  // some legacy browsers choke on 204
 
+/*
+* To see the code for this answer
+* go to https://github.com/kamatheuska/portfolio/blob/master/controllers/timestamp.js#L5
+*/
 app.get('/api', async (req, res, next) => {
   try {
     const response = await fetch(timestampEndpoint)
@@ -25,6 +29,10 @@ app.get('/api', async (req, res, next) => {
   }
 })
 
+/*
+* To see the code for this answer
+* go to https://github.com/kamatheuska/portfolio/blob/master/controllers/timestamp.js#L6
+*/
 app.get('/api/:date', async (req, res, next) => {
   try {
     const date = req.params.date
